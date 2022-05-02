@@ -1,24 +1,27 @@
 <template>
   <div>
-    <p>
-      {{ this.items.comments}}
-    </p>
+    <div>ASK</div>
+    <div>user: {{ items.user }}</div>
+    <div>points: {{ items.points }}</div>
+    <h2>content</h2>
+    <p v-html="items.content"></p>
   </div>
 </template>
 
 <script>
-import { fetchItem } from '../api/index.js';
+
 
 export default {
-  data() {
-    return {
-      items:{}
+  computed: {
+    items() {
+      return this.$store.state.item;
     }
   },
   created(){
-    fetchItem(this.$route.params.id)
-      .then( res => this.items = res.data )
-      .catch( error => console.log(error) );
+    const userId = this.$route.params.id
+    this.$store.dispatch('FETCH_ITEM',userId);
+
+      
   }
 }
 </script>

@@ -11,7 +11,7 @@ export default new VueRouter({
   routes:[
     {
       path:'/',
-      redirect:'/ask'
+      redirect:'/news'
     },
     {
       path:'/news',
