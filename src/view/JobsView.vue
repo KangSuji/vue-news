@@ -5,6 +5,8 @@
       <ul class="news-list">  
         <li v-for="item in items" :key="item.id">
           <a :href="item.url">{{ item.title }}</a>
+          <span class="news-info">{{ item.domain}} |</span>
+          <span class="news-info"> {{ item.time_ago}}</span>
         </li>
       </ul>
     </div>
@@ -36,17 +38,24 @@ export default {
     padding: 0.5rem 0px;
   }
   .news-list{
-    margin: 0;
+    margin: 0px;
     padding: 0;
+    
   }
   .news-list li {
     font-size: 18px;
-    line-height: 1.5rem;
+    
   }
-
+  .news-list li a{
+    display: flex;
+  }
   .news-list li a:hover {
     text-decoration: underline;
     color: #5e594d;
     font-weight: bold;
+  }
+  .news-info {
+    font-size: 1rem;
+    color: #E6DDC6;
   }
 </style>
