@@ -2,7 +2,8 @@ import {
   fetchNews,
   fetchAsk,
   fetchJobs, 
-  fetchItem
+  fetchItem,
+  fetchUser
 } from '../api/index.js';
 
 export default {
@@ -25,5 +26,10 @@ export default {
     fetchItem(userId)
       .then( res =>context.commit('SET_ITEM', res.data) )
       .catch( error => console.log(error) );
+  },
+  FETCH_USER(context, userId) {
+    fetchUser(userId)
+    .then( res =>context.commit('SET_User', res.data) )
+    .catch( error => console.log(error) );
   }
 }

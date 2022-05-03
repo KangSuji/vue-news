@@ -39,7 +39,7 @@ export default {
     padding: 15px;
   }
   .section-title {
-     font-size: 2rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #5e594d;
     padding: 0.5rem 0px;

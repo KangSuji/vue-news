@@ -4,6 +4,7 @@ import NewsView from '../view/NewsView.vue';
 import AskView from '../view/AskView.vue';
 import JobsView from '../view/JobsView.vue';
 import ItemView from '../view/ItemView.vue';
+import UserView from '../view/UserView.vue';
 
 Vue.use(VueRouter);
 export default new VueRouter({
@@ -30,6 +31,10 @@ export default new VueRouter({
       component: ItemView
 
     },
+    {
+      path:'/user/:id',
+      component: UserView
+    }
   ]
 });
 

@@ -12,6 +12,7 @@ export default new Vuex.Store({
     ask: [],
     jobs: [],
     item: {},
+    user: {},
   },
   getters,
   mutations,

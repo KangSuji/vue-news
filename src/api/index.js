@@ -12,10 +12,14 @@ function fetchJobs() {
 function fetchItem(id) {
   return axios.get(`https://api.hnpwa.com/v0/item/${id}.json`)
 }
+function fetchUser(id) {
+  return axios.get(`https://api.hnpwa.com/v0/user/${id}.json`)
+}
 
 export {
   fetchNews,
   fetchAsk,
   fetchJobs,
-  fetchItem
+  fetchItem,
+  fetchUser
 }
