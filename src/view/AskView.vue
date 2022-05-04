@@ -1,6 +1,6 @@
 <template>
   <List>
-    <div slot="title" class="section-title">Jobs</div>
+    <div slot="title" class="section-title">Ask</div>
   </List>
 </template>
 

@@ -2,16 +2,19 @@
   <div id="app">
     <tool-bar></tool-bar>
     <router-view></router-view>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import ToolBar from './components/ToolBar.vue'
+import ToolBar from './components/ToolBar.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
   components: {
-    ToolBar
+    ToolBar,
+    Footer,
   }
 }
 </script>
@@ -21,6 +24,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
+  height: 100vh;
 }
 a {
   color: #000;

@@ -14,7 +14,7 @@ export default {
 
 <style scoped>
   .container {
-    padding: 15px;
+    padding: 15px 25px;
     background-color: #E6DDC6;
     color: #A19882;
     font-size: 1.2rem;

@@ -36,7 +36,8 @@ export default {
 
 <style scoped>
   .ask-item {
-    padding: 15px;
+    padding: 15px 25px 0px 25px;
+    
   }
   .section-title {
     font-size: 2rem;
@@ -52,6 +53,7 @@ export default {
   }
   .material-icons{
     font-size: 3rem;
+    color: #5e594d;
   }
   .ask-title {
     font-size: 1.5rem;

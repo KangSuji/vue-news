@@ -51,7 +51,7 @@ export default {
 
 <style scoped>
   .news {
-    padding: 15px;
+    padding: 15px 25px;
   }
   .section-title{
     font-size: 2rem;
