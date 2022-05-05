@@ -4,13 +4,27 @@
       <div class="user-info">
         <span class="material-icons">person</span>
         <div>
-          <div>user : {{ items.user }}</div>
+          <router-link :to="`/user/${items.user}`">user : {{ items.user }}</router-link>
+          <div></div>
           <div>points : {{ items.points }}</div>
         </div>
       </div>
     <div>
       <span class="ask-title">{{ items.title }}</span>
       <p v-html="items.content"></p>
+    </div>
+    <div>
+      <div class="comments-title-section">
+        <div class="section-title">comments</div>
+        <span class="material-icons">arrow_drop_down</span>
+      </div>
+      <div class="comments-section">
+        <div v-for="(value,index) in items.comments" :key="index" class="comments">
+          <router-link :to="`/user/${items.comments[index].user}`">user : {{ items.comments[index].user }}</router-link>
+          <div>time_ago: {{ items.comments[index].time_ago }}</div>
+          <div v-html="items.comments[index].content"></div>
+        </div>
+      </div>
     </div>
     
   </div>
@@ -60,5 +74,13 @@ export default {
     font-weight: bold;
     color: #5e594d;
     padding: 0.5rem 0px;
+  }
+  .comments-title-section {
+    display: flex;
+    align-items: center;
+  }
+  .comments {
+    border-bottom: 1px dashed #5e594d;
+    margin-bottom: 10px;
   }
 </style>
