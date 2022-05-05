@@ -1,7 +1,7 @@
 # vue2-news
-```
+
 https://beamish-concha-aa339d.netlify.app
-```
+
 ## Project setup
 ```
 npm install
